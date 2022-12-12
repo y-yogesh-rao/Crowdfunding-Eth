@@ -1,0 +1,26 @@
+{
+  "name": "crowdfunding-eth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/y-yogesh-rao/Crowdfunding-Eth.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/y-yogesh-rao/Crowdfunding-Eth/issues"
+  },
+  "homepage": "https://github.com/y-yogesh-rao/Crowdfunding-Eth#readme",
+  "dependencies": {
+    "fs-extra": "^11.1.0",
+    "ganache": "^7.5.0",
+    "mocha": "^10.2.0",
+    "solc": "^0.8.17",
+    "web3": "^1.8.1"
+  }
+}
