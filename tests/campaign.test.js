@@ -55,4 +55,11 @@ describe('Campaign', () => {
             assert(error);
         }
     });
+
+    it('allows manager to create a request', async () => {
+        await campaign.methods.createRequest('Buying car parts', '600', accounts[2]).send({ from: accounts[0], gas: 2000000 });
+
+        const request = await campaign.methods.requests(0).call();
+        assert.equal('Buying car parts', request.description);
+    });
 });
