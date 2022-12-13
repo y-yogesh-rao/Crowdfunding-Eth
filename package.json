@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "next dev",
     "test": "mocha tests --recursive"
   },
   "repository": {
@@ -21,6 +22,9 @@
     "fs-extra": "^11.1.0",
     "ganache": "^7.5.0",
     "mocha": "^10.2.0",
+    "next": "^13.0.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "solc": "^0.8.17",
     "web3": "^1.8.1"
   }
