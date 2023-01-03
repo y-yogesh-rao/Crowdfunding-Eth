@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
     "test": "mocha tests --recursive"
   },
   "repository": {

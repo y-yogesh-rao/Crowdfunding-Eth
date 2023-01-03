@@ -77,4 +77,14 @@ contract Campaign {
         request.isComplete = true;
         payable(request.recipient).transfer(request.value);
     }
+
+    function getSummary() public view returns (uint, uint, uint, uint, address) {
+        return (
+            minimumContribution,
+            address(this).balance,
+            requestCount,
+            contributorsCount,
+            manager
+        );
+    }
 }

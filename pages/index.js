@@ -1,5 +1,6 @@
 import 'semantic-ui-css/semantic.min.css';
 
+import { Link } from '../routes';
 import React, { Component } from 'react';
 import Layout from '../components/Layout.js';
 import { Card, Button } from 'semantic-ui-react';
@@ -17,7 +18,11 @@ class CampaignIndex extends Component {
         return this.props.campaings.map(address => {
             return {
                 header: address,
-                description: <a>View Campaign</a>,
+                description: (
+                    <Link route={`/campaigns/${address}`}>
+                        <a>View Campaign</a>
+                    </Link>
+                ),
                 fluid: true
             }
         });
@@ -26,7 +31,15 @@ class CampaignIndex extends Component {
     render() {
         return <Layout>
             <h1> Running Campaigns </h1>
-            <Button floated='right' content='Create Campaign' icon='add' primary />
+
+            <Link route={'/campaigns/new'}>
+                <Button 
+                    primary 
+                    icon='add' 
+                    floated='right' 
+                    content='New Campaign'
+                />
+            </Link>
             <Card.Group items={this.renderCampaigns()} />
         </Layout>   
     }
